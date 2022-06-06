@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35080E44-2B9F-4929-BC1D-969F4E974DB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoyuToyBox</RootNamespace>
+    <AssemblyName>MoyuToyBox</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(BESIEGE_GAME_ASSEMBLIES)Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicText">
+      <HintPath>$(BESIEGE_GAME_ASSEMBLIES)DynamicText.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>$(BESIEGE_UNITY_ASSEMBLIES)UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeamRifle.cs" />
+    <Compile Include="BeamSaber.cs" />
+    <Compile Include="CannonStript.cs" />
+    <Compile Include="CommomStript.cs" />
+    <Compile Include="CustomBlockController.cs" />
+    <Compile Include="EnergyShield.cs" />
+    <Compile Include="keepSpeed.cs" />
+    <Compile Include="keymsgController.cs" />
+    <Compile Include="LaserLauncher.cs" />
+    <Compile Include="LedBlock.cs" />
+    <Compile Include="MessageController.cs" />
+    <Compile Include="MetalSword.cs" />
+    <Compile Include="MissileLauncher.cs" />
+    <Compile Include="MoyuToyBox.cs" />
+    <Compile Include="ParticleFXBlock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RGBController.cs" />
+    <Compile Include="SmartTurret.cs" />
+    <Compile Include="SpinningBlockStript.cs" />
+    <Compile Include="SteeringBlockStript.cs" />
+    <Compile Include="TorpedoLauncher.cs" />
+    <Compile Include="TrailFXBlock.cs" />
+    <Compile Include="TurretController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(ProjectDir)..\..\MoyuToyBox\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
