@@ -1,0 +1,244 @@
+<Mod>
+	<!-- Mod manifest file.
+		 You should at the very least replace the values marked with FIX.
+		 
+		 See the documentation for further information on any of these elements.
+	-->
+
+	<!-- General information about the mod. -->
+	<Name>MoyuToyBox</Name>
+	<Author>ProNou</Author> <!-- FIX: Insert your name here. -->
+	<!-- Major.Minor.Build -->
+	<Version>1.0.0</Version>
+	
+	<Description>
+  some interesting toys. <!-- FIX: Insert a short description here. -->
+
+	</Description>
+		<Icon name="icon" />
+	
+	<!-- Texture resource used as thumbnail when uploading the mod to the workshop.
+		 If this is not present, the Icon texture is used instead.
+		 This can be set to have different icons in the mod list and the workshop. -->
+	<WorkshopThumbnail name="thumbnail" />
+	<!-- Square icon of the mod. Texture defined in the Resources section.
+		 This is displayed in the mod list and, if WorkshopThumbnail is not set, used as thumbnail when uploaded to the Steam workshop. -->
+	<!-- <Icon name="icon" /> -->
+	
+	<!-- Texture resource used as thumbnail when uploading the mod to the workshop.
+		 If this is not present, the Icon texture is used instead.
+		 This can be set to have different icons in the mod list and the workshop. -->
+	<!-- <WorkshopThumbnail name="thumbnail" /> -->
+	
+	<!-- Enables reloading of various values at runtime. This is normally triggered automatically when a file is changed,
+		 you can also trigger it by pressing Ctrl+H.
+		 Reloadable values include:
+			- Colliders
+			- Adding Points
+			- FireInteractions
+			- Mesh Transforms
+		 
+		 Also gives some extra information about warnings and errors parsing the XML files, at the cost
+		 of a slight increase in loading time for mods with many XML elements.
+		 
+		 It is generally recommended to turn this on while developing the mod, but keep it off for any releases.
+		 Important: You cannot upload mods to Steam or WeGame while Debug is turned on.
+		 
+		 Note: This value is independent of the Debug values for specific Blocks and Entities.-->
+	<Debug>false</Debug>
+	
+	<!-- Whether the mod can be used in MP or only in SP.
+		 SP-only mods are easier to write but obviously more limited in their uses.
+		 SP-only mods will be loaded when the first singleplayer level is loaded.
+		 Once an SP-only mod was loaded, it is impossible to start a multiplayer game until the game is restarted since the mod can't be unloaded again. -->
+	<MultiplayerCompatible>true</MultiplayerCompatible>
+	
+	<!-- Include this to make the mod be loaded in the title screen.
+		 Normally mods will only be loaded when the actual game is entered
+		 (i.e. when starting/joining an MP session or entering an SP level).
+		 
+		 Only use this if there is a good reason for it!
+		 Mods that are immediately loaded when starting the game are significantly
+		 less user-friendly, whenever the mod is disabled the game needs to be restarted.-->
+	<!-- <LoadInTitleScreen /> -->
+	
+	<!-- Note on IDs -->
+	<!-- Many elements of your mod need to have an ID assigned that will identify them.
+		 This includes blocks, entities, triggers and events.
+		 IDs are always integers (except the mod ID, that is an unsigned long).
+		 
+		 Except for the ID of the mod itself, they are always local to the mod.
+		 That means you do not need to worry about any conflicts with other mods, because
+		 the mod loader identifies these elements using the mod ID and the element ID.
+		 
+		 You should not change IDs after you have published your mod in any way.
+		 If you do, saved machines and levels will not load the elements correctly anymore.
+		 
+		 Do not rely on the game using the IDs you specified internally in fields such as in BlockBehaviour.BlockID.
+		 In many cases (e.g. blocks and entities) the game will identify your elements by another ID computed based
+		 on the mod and element IDs.
+	-->
+	
+	<!-- Any assemblies that contain code for your mod.
+		 If an assembly listed here contains an implementation of the Mod class,
+		 its OnLoad method will be called.
+		 BlockScripts for your blocks (if any) will be searched for in these assemblies.
+		 The path attribute is relative to the location of this file. -->
+	<Assemblies>
+		<!-- <Assembly path="SomeAssembly.dll" /> -->
+		<!-- <ScriptAssembly path="SomeAssembly/" /> -->
+		<Assembly path="MoyuToyBox.dll" />
+	</Assemblies>
+	
+	<!-- Any blocks your mod adds to the game.
+		 The path attribute is relative to the location of this file. -->
+	<Blocks>
+		<!-- <Block path="SomeBlock.xml" /> -->
+		<Block path="SmartTurret.xml" />
+		<Block path="TorpedoLauncher.xml" />
+		<Block path="MissileLauncher.xml" />
+		<Block path="LaserLauncher.xml" />
+		<Block path="BeamRifle.xml" />
+    <Block path="BeamSaber.xml" />
+    <Block path="MetalSword.xml" />
+    <Block path="EnergyShield.xml" />
+		<Block path="LedBlock.xml" />
+    <Block path="TrailFXBlock.xml" />
+    <Block path="ParticleFXBlock.xml" />
+	</Blocks>
+	
+	<!-- Any entities (level objects) your mod adds to the game.
+		 The path attribute is relative to the location of this file. -->
+	<Entities>
+		<!-- <Entity path="SomeEntity.xml" /> -->
+	</Entities>
+	
+	<!-- Any logic trigger types your mod adds to the game. -->
+	<!-- See the ModTriggers class for info on how to activate your triggers. -->
+	<Triggers>
+		
+	</Triggers>
+	
+	<!-- Any logic event types your mod adds to the game. -->
+	<!-- See the ModEvents class for info on how to handle your events being activated. -->
+	<Events>
+		
+	</Events>
+	
+	<!-- Access these keys using the ModKeys class. -->
+	<Keys>
+		
+	</Keys>
+	
+	<!-- The mod loader will automatically make all resources listed here available
+		 to your mod via the ModResource class.
+		 The path attribute is relative to the Resources/ directory.
+		 You also need to list resources used in your Blocks and Entities.
+		 Available resource types are Mesh, Texture, AudioClip, and AssetBundle. -->
+	<Resources>
+		<!-- <Mesh name="some-mesh-name" path="some_mesh_file.obj" /> -->
+		<!-- <Texture name="some-texture-name" path="some_texture_file.png" /> -->
+    <Mesh name="Quad" path="quad.obj" />
+    <Mesh name="Arrow" path="arrow.obj" />
+    <Texture name="thumbnail" path="icon.png" />
+		<Texture name="icon" path="icon.png" />
+		<Texture name="Glow" path="Particles\CommonGlow.png" />
+    <Texture name="Star Glow" path="Particles\StarGlow.png" />
+    <Texture name="Circle" path="Particles\Circle.png" />
+    <Texture name="Smoke" path="Particles\Smoke.png" />
+    <Texture name="Feather" path="Particles\feather.png" />
+    <Texture name="Gun Fire" path="Particles\GunFire.png" />
+    <Texture name="bladeTrail" path="bladeTrail.png" />
+    <Texture name="LightGreen" path="lightGreen.png" />
+    <Texture name="LightYellow" path="lightYellow.png" />
+
+    <Mesh name="turret" path="SmartTurret\smartturret.obj" />
+    <Texture name="turret Texture" path="SmartTurret\smartturret.png" />
+    <Texture name="turret Icon" path="SmartTurret\TurretIcon.png" />
+
+    <Mesh name="TorpedoLauncher" path="TorpedoLauncher\torpedoLauncher.obj" />
+    <Texture name="TorpedoLauncher Texture" path="TorpedoLauncher\torpedoLauncher.png" />
+    <Texture name="TorpedoLauncher Light" path="TorpedoLauncher\TorpedoLauncherLightMap.png" />
+
+    <Mesh name="Torpedo" path="TorpedoLauncher\Torpedo.obj" />
+    <Texture name="Torpedo Texture" path="TorpedoLauncher\Torpedo.png" />
+    <Texture name="Torpedo Light" path="TorpedoLauncher\TorpedoLightMap.png" />
+    <Texture name="Torpedo trail" path="TorpedoLauncher\trail.png" />
+    <Texture name="Torpedo Icon" path="TorpedoLauncher\TorpedoIcon.png" />
+    <AudioClip name="Torpedo Launched" path="TorpedoLauncher\TorpedoLaunched.wav" />
+    <AudioClip name="Torpedo Explo" path="TorpedoLauncher\TorpedoExplo.wav" />
+    <AudioClip name="Plasma Launched" path="TorpedoLauncher\PlasmaLaunched.wav" />
+    <Texture name="Expl ramp" path="TorpedoLauncher\Explosion Ramp.png" readable="true" />
+    <Texture name="Expl noise" path="TorpedoLauncher\Explosion Noise.png" />
+
+    <Mesh name="MissileLauncher" path="MissileLauncher\MissileLauncher.obj" />
+    <Texture name="MissileLauncher Texture" path="MissileLauncher\MissileLauncher.png" />
+    <Texture name="MissileLauncher Light" path="MissileLauncher\MissileLauncherLightMap.png" />
+
+    <Mesh name="Missile" path="MissileLauncher\Missile.obj" />
+    <Texture name="Missile Texture" path="MissileLauncher\Missile.png" />
+    <Texture name="Missile Light" path="MissileLauncher\MissileLightMap.png" />
+    <Texture name="Missile trail" path="MissileLauncher\MissileTrail.png" />
+    <Texture name="Missile Explo" path="MissileLauncher\MissileExplo.png" />
+    <Texture name="Missile Icon" path="MissileLauncher\MissileIcon.png" />
+    <AudioClip name="Missile Launched" path="MissileLauncher\MissileLaunched.wav" />
+    <AudioClip name="Missile Exploed" path="MissileLauncher\MissileExplo.wav" />
+
+    <Mesh name="LaserLauncher" path="LaserLauncher\LaserLauncher.obj" />
+    <Texture name="LaserLauncher Texture" path="LaserLauncher\LaserLauncher.png" />
+    <Texture name="LaserLauncher Light" path="LaserLauncher\LaserLauncherLightMap.png" />
+    <Texture name="LaserLauncher Light2" path="LaserLauncher\LaserLauncherLightMap2.png" />
+
+    <Texture name="Beam" path="LaserLauncher\Beam.png" />
+    <Texture name="BeamAdditive" path="LaserLauncher\BeamAdditive.png" />
+    <Texture name="BeamHited" path="LaserLauncher\BeamHited.png" />
+    <Texture name="BeamHitedAdditive" path="LaserLauncher\BeamHitedAdditive1.png" />
+    <AudioClip name="Laser Launched" path="LaserLauncher\LaserLaunch.wav" />
+    <AudioClip name="Laser Noise" path="LaserLauncher\LaserNoise.wav" />
+
+    <Mesh name="BeamRifle" path="BeamRifle\BeamRifle.obj" />
+    <Texture name="BeamRifle Texture" path="BeamRifle\BeamRifle.png" />
+    <Texture name="BeamRifle Light" path="BeamRifle\BeamRifleLightMap.png" />
+
+    <Mesh name="BeamBullet" path="BeamRifle\BeamBullet.obj" />
+    <AudioClip name="Beam Launched" path="BeamRifle\BeamLaunched.wav" />
+    <Mesh name="ShotgunScan" path="ShotgunScan.obj" />
+
+    <Mesh name="BeamSaber" path="BeamSaber\BeamSaber.obj" />
+    <Texture name="BeamSaber Texture" path="BeamSaber\BeamSaber.png" />
+    <Texture name="BeamSaber Light" path="BeamSaber\BeamSaberLightMap.png" />
+
+    <Mesh name="MetalSword" path="MetalSword\MetalSword.obj" />
+    <Texture name="MetalSword Texture" path="MetalSword\MetalSword.png" />
+    <Texture name="MetalSword Light" path="MetalSword\MetalSwordLightMap.png" />
+
+    <Mesh name="Shield Base" path="EnergyShield\ShieldBase.obj" />
+    <Texture name="Shield Base Texture" path="EnergyShield\ShieldBase.png" />
+    <Texture name="Shield Base Light" path="EnergyShield\ShieldBaseLightMap.png" />
+    <Mesh name="Box Shield" path="EnergyShield\BoxShield.obj" />
+    <Mesh name="Box Shield Col" path="EnergyShield\BoxShieldCol.obj" />
+    <Mesh name="Hex Shield" path="EnergyShield\HexShield.obj" />
+    <Mesh name="Hex Shield Col" path="EnergyShield\HexShieldCol.obj" />
+    <Mesh name="Hex Shield2" path="EnergyShield\HexShield2.obj" />
+    <Mesh name="Hex Shield2 Col" path="EnergyShield\HexShieldCol2.obj" />
+    <Mesh name="Oct Shield" path="EnergyShield\OctShield.obj" />
+    <Mesh name="Oct Shield Col" path="EnergyShield\OctShieldCol.obj" />
+    <Mesh name="Half Ball Shield" path="EnergyShield\HalfBallShield.obj" />
+    <Texture name="Quad Shield Texture" path="EnergyShield\quadShieldTex.png" />
+
+    <Mesh name="Box" path="LedBlock\Box.obj" />
+    <Mesh name="circle" path="LedBlock\circle.obj" />
+    <Mesh name="halfcircle" path="LedBlock\halfcircle.obj" />
+    <Mesh name="quartercircle" path="LedBlock\quartercircle.obj" />
+    <Texture name="streamlight" path="LedBlock\streamlight.png" />
+
+    <Texture name="Trail Strip" path="TrailFXBlock\trailStripe.png" />
+    <Texture name="Trail Flash" path="TrailFXBlock\trailFlash.png" />
+    <Texture name="Trail Lightning" path="TrailFXBlock\trailLightning.png" />
+	</Resources>
+
+
+<!-- This value is automatically generated. Do not change it or you may break machine&level save files. -->
+<ID>ddab1760-8e27-4a36-8be8-07d6641901ff</ID>
+
+</Mod>

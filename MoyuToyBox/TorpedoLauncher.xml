@@ -1,0 +1,39 @@
+<Block>
+	<Debug>false</Debug>
+	<ID>2</ID>
+	<Name>Torpedo Launcher</Name>
+	<Mass>1.0</Mass>
+  <Script>MoyuToyBox.TorpedoLauncher</Script>
+  <Health>8</Health>
+
+
+	<Mesh name="TorpedoLauncher"> <!-- Must be defined as a resource in the manifest. -->
+		<Position x="0.0" y="0.0" z="0.5" />
+		<Rotation x="0.0" y="0.0" z="0.0" />
+		<Scale x="0.4" y="0.4" z="0.4" />
+	</Mesh>
+	
+	<Texture name="TorpedoLauncher Texture" /> <!-- Must be defined as a resource in the manifest. -->
+	
+	<Icon>
+		<Position x="0.0" y="0.0" z="0.0" />
+		<Rotation x="-135.0" y="-60.0" z="0.0" />
+		<Scale x="0.15" y="0.15" z="0.15" />
+	</Icon>
+	<Colliders>
+		<BoxCollider>
+			<Position x="0.0" y="0.0" z="0.75" />
+			<Rotation x="0.0" y="0.0" z="0.0" />
+			<Scale x="1.0" y="1.0" z="1.5" />
+		</BoxCollider>
+	</Colliders>
+	
+	<BasePoint hasAddingPoint="false">
+		<Stickiness enabled="true" radius="0.6" />
+		<Motion x="false" y="false" z="false" /> <!-- Optional -->
+	</BasePoint>
+	
+	<AddingPoints>
+
+	</AddingPoints>
+</Block>

@@ -1,0 +1,83 @@
+<Block>
+	<Debug>false</Debug>
+	<ID>1</ID>
+	<Name>Smart Turret</Name>
+	<Mass>2</Mass>
+	<CanFlip>true</CanFlip>
+	<Script>MoyuToyBox.SmartTurret</Script>
+<!--
+<ModuleMapperTypes>
+	<Key displayName="Left" key="left" default="None" />
+	<Key displayName="Right" key="right" default="None" />
+	<Slider displayName="Speed" key="speed" min="0.0" max="2.0" default="1.0" />
+	<Toggle displayName="automatic" key="automatic" default="false"/>
+</ModuleMapperTypes>
+
+	<Modules> 
+  <Steering> 
+  <LeftKey key="left" /> 
+  <RightKey key="right" /> 
+  <SpeedSlider key="speed" /> 
+  <AutomaticToggle key="automatic" /> 
+  <Axis>Y</Axis> 
+  <MaxAngularSpeed>300</MaxAngularSpeed> 
+  <TargetAngleSpeed>0.8</TargetAngleSpeed> 
+  <HasLimits>True</HasLimits> 
+  <LimitsDisplay> 
+  <Position x="0" y="0" z="0" /> 
+  <Rotation x="0" y="0" z="0" /> 
+  <Scale x="0.5" y="0.5" z="0.5" /> 
+  </LimitsDisplay> 
+  <LimitsDefaultMin>45</LimitsDefaultMin> 
+  <LimitsDefaultMax>45</LimitsDefaultMax> 
+  <LimitsHighestAngle>180</LimitsHighestAngle> 
+  </Steering> 
+  </Modules>
+	-->
+  <Mesh name="turret"> <!-- Must be defined as a resource in the manifest. -->
+		<Position x="0.0" y="0.0" z="0.5" />
+		<Rotation x="0.0" y="0.0" z="180.0" />
+		<Scale x="0.3351" y="0.3351" z="0.3351" />
+	</Mesh>
+	
+	<Texture name="turret Texture" /> <!-- Must be defined as a resource in the manifest. -->
+	
+	<Icon>
+		<Position x="0.0" y="0.0" z="0.0" />
+		<Rotation x="45.0" y="-60.0" z="0.0" />
+		<Scale x="0.15" y="0.15" z="0.15" />
+	</Icon>
+
+	
+	<Colliders>
+		<!-- TODO: Insert Collider definitions here.
+			 Examples: -->
+    
+		<BoxCollider>
+			<Position x="0.0" y="0.0" z="0.5" />
+			<Rotation x="0.0" y="0.0" z="0.0" />
+			<Scale x="0.7" y="0.7" z="0.7" />
+		</BoxCollider>
+
+	</Colliders>
+	
+	<BasePoint hasAddingPoint="false">
+		<Stickiness enabled="true" radius="0.6" />
+		<!-- Can only have motion if sticky -->
+    <Motion x="false" y="false" z="false" />
+	</BasePoint>
+	
+	<AddingPoints>
+		<!-- TODO: Insert AddingPoint definitions here. Example:-->
+		<AddingPoint>
+        	<Position x="0.0" y="0.0" z="1.0" />
+        	<Rotation x="0" y="0" z="0" />
+        	<Stickiness enabled="false" radius="1.0" />
+    	</AddingPoint>
+		<AddingPoint>
+        	<Position x="0.0" y="0.0" z="0.5" />
+        	<Rotation x="0" y="0" z="0" />
+        	<Stickiness enabled="false" radius="1.0" />
+    	</AddingPoint>
+	</AddingPoints>
+</Block>
