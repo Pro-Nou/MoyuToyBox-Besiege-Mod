@@ -2,6 +2,8 @@
 Added some fun blocks into Besiege  
 
 # Previews  
+注意：食品中的卡顿是由github播放器导致的，暂时没有找到解决办法。  
+NOTE: Freezes in videos are caused by github's player, I'm not sure how to solve it.   
 
 # (鼠标炮控)SmartTurret
 https://user-images.githubusercontent.com/74658051/180628818-7d63818f-c812-47db-a6b3-fe4d7d11bd71.mp4
@@ -106,3 +108,9 @@ Compared with ParticleEmitter in SpecialEffectMod, this block could modify parti
 All EFXs support custom colors.  
 
 # RGB
+https://user-images.githubusercontent.com/74658051/180632038-853d5c67-7287-4d11-af90-60b2e36e94fc.mp4
+
+每一个零件都具有的通用效果，启用后高光部分会变为RGB渐变色。  
+为节省资源，该效果由一个SingleInstance进行HSV到RGB的转换，各零件每帧读取该单例的返回值即可，因此所有零件的RGB渐变是同步的。  
+A common component that every blocks has. When enabled, the highlight part will become RGB gradient.  
+For reducing resource cost, a SingleInstance transform HSV to RGB, then return the RGB value to each blocks. Thus RGB gradients for all blocks are synchronized.  
