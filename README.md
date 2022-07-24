@@ -2,8 +2,10 @@
 Added some fun blocks into Besiege  
 
 # Previews  
-注意：食品中的卡顿是由github播放器导致的，暂时没有找到解决办法。  
+注意：视频中的卡顿是由github播放器导致的，暂时没有找到解决办法。  
+      如果想查看流畅的视频请下载到本地。  
 NOTE: Freezes in videos are caused by github's player, I'm not sure how to solve it.   
+      If you want to view a smooth version, please download it.  
 
 # (鼠标炮控)SmartTurret
 https://user-images.githubusercontent.com/74658051/180628818-7d63818f-c812-47db-a6b3-fe4d7d11bd71.mp4
