@@ -3,8 +3,9 @@ Added some fun blocks into Besiege
 
 # Previews  
 
-
+# (鼠标炮控)SmartTurret
 https://user-images.githubusercontent.com/74658051/180628818-7d63818f-c812-47db-a6b3-fe4d7d11bd71.mp4
+This block will try to "look at" the point that camera is aiming
 
 
 https://user-images.githubusercontent.com/74658051/180628836-757a984e-9414-417f-a446-491b306c3b51.mp4
